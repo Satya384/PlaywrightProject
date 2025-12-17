@@ -7,7 +7,7 @@ test.only("Practice Test Case", async ({page})=>{
 
     const poManager = new POManager(page, expect);
     await poManager.getLoginPage().goto();
-    await poManager.getLoginPage().login(testData.email, testData.pass);
+    await poManager.getLoginPage().login(testData.email, testData.password);
     await poManager.getDashboardPage().addToCart(testData.itemName);
     await poManager.getPaymentPage().gotoCheckoutPage();
     await poManager.getPaymentPage().validateOrderDetails(testData.itemName, testData.email);

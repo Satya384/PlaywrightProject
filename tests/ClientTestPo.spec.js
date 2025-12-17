@@ -3,11 +3,6 @@ const{POManager} = require('../PageObjectModel/POManager');
 const testData = JSON.parse(JSON.stringify(require("../utils/testData.json")));
 
 test.only("Practice Test Case", async ({page})=>{
-    // const email = "sathyakrishna384@gmail.com";
-    // const pass = "Satya@0384";
-    // const url = "https://rahulshettyacademy.com/client/#/auth/login";
-    // const itemName = "ZARA COAT 3";
-    // const desiredCountry = " India";
     let orderId;
 
     const poManager = new POManager(page, expect);

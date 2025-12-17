@@ -7,11 +7,6 @@ test.only("Practice Test Case", async ({page})=>{
     await page.locator("#userEmail").fill(email);
     await page.locator("#userPassword").fill("Satya@0384");
     await page.locator("#login").click();
-    // await page.locator("text=Automation").waitFor();
-    // console.log(await page.locator("[style = 'text-transform: uppercase;'] b").first().textContent());
-    // await page.waitForLoadState('networkidle');
-    // console.log(await page.locator("[style = 'text-transform: uppercase;'] b").allTextContents());
-
     // Add item to cart
     const itemName = "ZARA COAT 3";
     await page.locator("#products").first().waitFor();
@@ -31,7 +26,7 @@ test.only("Practice Test Case", async ({page})=>{
     // enter country
     await page.locator("[placeholder='Select Country']").pressSequentially("indi",{delay:150});
     // get dropdown options
-    const dropdown = await page.locator(".ta-results");
+    const dropdown = page.locator(".ta-results");
     await dropdown.waitFor();
     const n = await dropdown.locator("button").count();
     const desiredCountry = " India";
